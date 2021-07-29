@@ -1,0 +1,90 @@
+ docker swarm join --token SWMTKN-1-11x9scbkuojt9l9k634bo0vs4e4b9q40pm56951tajmta3tslj-cfwtp80n3c0nl07ecgsksz3n1 172.31.39.9:2377
+ 
+ SWMKEY-1-SpqWsPeMd+upogslrqD+3Iye/wqY6mR/mwjZHM8JNwg
+ 
+ 
+ 
+ 
+  docker swarm join --token SWMTKN-1-11x9scbkuojt9l9k634bo0vs4e4b9q40pm56951tajmta3tslj-cfwtp80n3c0nl07ecgsksz3n1 172.31.39.163:2377
+   docker swarm join --token SWMTKN-1-11x9scbkuojt9l9k634bo0vs4e4b9q40pm56951tajmta3tslj-cfwtp80n3c0nl07ecgsksz3n1 172.31.36.70:2377
+   
+   DD
+   Copy and paste this URL to download your Edition:
+   
+   https://storebits.docker.com/ee/trial/sub-56a3bd89-48f9-4b8f-8d04-26a148851ed6--
+   https://storebits.docker.com/ee/trial/sub-56a3bd89-48f9-4b8f-8d04-26a148851ed6
+   
+   
+   
+   docker swarm leave --force
+   sudo apt-get remove docker.io -y
+   sudo apt-get update
+   sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+   DOCKER_EE_URL=https://storebits.docker.com/ee/trial/sub-56a3bd89-48f9-4b8f-8d04-26a148851ed6
+   DOCKER_EE_VERSION=18.09
+   curl -fsSL "${DOCKER_EE_URL}/ubuntu/gpg" | sudo apt-key add -
+   sudo apt-key fingerprint 6D085F96
+   sudo add-apt-repository "deb [arch=$(dpkg --print-architecture)] $DOCKER_EE_URL/ubuntu $(lsb_release -cs) stable-$DOCKER_EE_VERSION"
+   sudo apt-get update
+   sudo apt-get install docker-ee docker-ee-cli 
+   containerd.io -y
+   docker container ls
+   docker --version
+   docker info
+   
+   
+   
+   
+   docker container run --rm -it --name ucp -v /var/run/docker.sock:/var/run/docker.sock docker/ucp:3.1.4 install --host-address 172.31.39.9 --force-minimums --interactive
+	admin/admin123
+	
+	
+	
+	
+	
+	
+	docker run -it --rm docker/dtr install  --ucp-node worker1  --ucp-username admin  --ucp-url https://52.90.202.111  --ucp-ca "-----BEGIN CERTIFICATE-----
+MIIBfzCCASSgAwIBAgIUYfnhsYkPBqZdz/XBFD2T9qK9HC0wCgYIKoZIzj0EAwIw
+HTEbMBkGA1UEAxMSVUNQIENsaWVudCBSb290IENBMB4XDTE5MDMxNzA3MjYwMFoX
+DTI0MDMxNTA3MjYwMFowHTEbMBkGA1UEAxMSVUNQIENsaWVudCBSb290IENBMFkw
+EwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEnhQNk8U8xW0i19moxWVDi5JmmVY1dWtF
+ftITl7sWVKvbSG/Kd/e8VDYxMmkEmFcVusm/pPP++thSDBtuASd38aNCMEAwDgYD
+VR0PAQH/BAQDAgEGMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFPa2bJDM4twb
+DB+dg+MZgt9NvB1RMAoGCCqGSM49BAMCA0kAMEYCIQCc0WvdQ0PzjLUhpfvuyCfJ
+0nRSMHOUP1yA1wTuWDDHsAIhALoNwRj+vJ0c7wRDrlM2hKVM5p4WuTHJ/+DtrPlo
+GkLA
+-----END CERTIFICATE-----
+"
+
+
+
+
+docker tag nginx dtr.example.com/admin/stud:v1
+docker push dtr.example.com/admin/stud:v1
+docker container run --log-driver none --rm -i --name ucp -v /var/run/docker.sock:/var/run/docker.sock docker/ucp:3.1.4 backup --no-passphrase --interactive > ucp-backup.tar
+
+docker run -i --rm docker/dtr:2.6.3 backup --ucp-insecure-tls --ucp-url https://172.31.39.9:443  --ucp-username admin --ucp-password admin123 > dtr-backup.tar
+-----------------
+
+
+
+
+lab10:
+docker swarm inint --advertise-addr 
+
+
+docker swarm inint --advertise -addr (masternotip)
+run the below comnads on other two machines/slave machines to add to the cluster
+docker swarm join --token SWMTKN-1-49ggol5uopf6gpka00wj2gekgyazqxmowpmyqic6dpmp67nvav-ep7v4gnem9xsd3px0stgc7gwo 192.168.0.8:2377
+docker swarm join --token SWMTKN-1-49ggol5uopf6gpka00wj2gekgyazqxmowpmyqic6dpmp67nvav-ep7v4gnem9xsd3px0stgc7gwo 192.168.0.8:2377
+
+docker node ls
+docker node update --availability drain node1
+docker node update --availability drain node1
+docker service create --name apache --replicas 4 --publish 80:80 --reserve-memory 600M httpd
+
+docker node promote node2 node3  node4--promote node as manager
+
+
+
+docker swarm join --token SWMTKN-1-5836slen6nwltu4yz71rso9vrvhk05bcm47ewgah4boru4a547-345yid8rmch0rlk7iz47wlqoj 192.168.0.7:2377
